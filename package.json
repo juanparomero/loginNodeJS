@@ -1,5 +1,5 @@
 {
-  "name": "MyApp",
+  "name": "loginNodeJS",
   "version": "1.0.0",
   "description": "Ejemplo de registro con MySQL",
   "main": "app.js",
@@ -11,6 +11,10 @@
   ],
   "author": "Juan Pablo Romero Aguirre (https://github.com/juanparomero)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/juanparomero/loginNodeJS.git"
+  },
   "dependencies": {
     "array-equal": "^1.0.0",
     "body-parser": "^1.17.1",
