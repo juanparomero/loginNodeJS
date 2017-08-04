@@ -1,13 +1,16 @@
 {
   "name": "MyApp",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Ejemplo de registro con MySQL",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Juan Pablo Romero Aguirre",
-  "license": "Copyright",
+  "keywords": [
+    "demo"
+  ],
+  "author": "Juan Pablo Romero Aguirre (https://github.com/juanparomero)",
+  "license": "MIT",
   "dependencies": {
     "array-equal": "^1.0.0",
     "body-parser": "^1.17.1",
