@@ -1,6 +1,6 @@
 {
-  "name": "loginNodeJS",
-  "version": "1.0.0",
+  "name": "loginnodejs",
+  "version": "1.0.1",
   "description": "Ejemplo de registro con MySQL",
   "main": "app.js",
   "scripts": {
@@ -13,7 +13,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/juanparomero/loginNodeJS.git"
+    "url": "git+ssh://git@github.com/juanparomero/loginnodejs.git"
   },
   "dependencies": {
     "array-equal": "^1.0.0",
