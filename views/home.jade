@@ -1,0 +1,55 @@
+extends ./layout.jade
+block cabecera
+	script(src="/js/register.js" type= "text/javascript")
+	nav(class="navbar navbar-default navbar-fixed-top")
+		div(class="container-fluid")
+			div(class="navbar-header")
+				button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false")
+					span(class="sr-only") Toggle navigation
+					span(class="icon-bar")
+					span(class="icon-bar")
+					span(class="icon-bar")
+				a(class="navbar-brand" href="/")
+					img(class="logo" alt="Home" src="img/logo.png")
+			div(class="collapse navbar-collapse" id="bs-example-navbar-collapse-1")
+				ul(class="nav navbar-nav")
+					li(class="active" data-toggle="tooltip" data-placement="bottom" )
+						span(class="sr-only") (current)
+						a(href="/home")
+							|Home
+					li( title="Preguntas frecuentes" data-toggle="tooltip" data-placement="bottom" )
+						a(href="/faq")
+							|FAQ
+block cuerpo
+	button(id="btn-open-login" class="btn btn-primary")
+		|Iniciar sesión
+	button(id="btn-open-register" class="btn btn-primary")
+		|Registrar
+	section#seccion(class="container-fluid")
+		form(id="formRegister" action="/register" method="POST")
+			.modal(id="modal-register")
+				.modal-content
+					.modal-header
+						h2 Registrar
+					.modal-body
+						.row
+							fieldset(id="formEmail" class="form-group col-xs-12 col-ms-12 col-md-12 col-lg-12")
+								label(class="control-label" for="email") Correo
+								input(id="email" name="email" class="form-control" type="email" placeholder="Escribe tu eMail" aria-describedby="helpBlockEmail" required)
+								span(id="helpBlockEmail" class="help-block" )
+									|El correo no es válido.
+						.row
+							fieldset(class="form-group col-xs-12 col-ms-12 col-md-12 col-lg-12")
+								label(class="control-label" for="password") Contraseña
+								input(id="password" name="password" class="form-control" type="password" placeholder="Escribe tu contraseña" required)
+						.row
+							fieldset(id="formConfirmPass" class="form-group col-xs-12 col-ms-12 col-md-12 col-lg-12")
+								label(class="control-label" for="password") Confirma la contraseña
+								input(id="confirmPass" name="confirmpassword" class="form-control" type="password" placeholder="Repite tu contraseña" required)
+								span(id="helpBlockConfirmPass" class="help-block" )
+									|La contraseña no coincide.
+					.modal-footer
+						.row
+							fieldset(class="form-group col-xs-12 col-ms-12 col-md-12 col-lg-12")
+								button.btn(id="btnRegister" type="submit" formid="formRegister" class="btn-primary") Registrar
+								button.btn(id="btnCancelar" type="button" formid="formRegister" class="btn-tipoligh") Cancelar

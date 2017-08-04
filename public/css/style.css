@@ -1,0 +1,261 @@
+:root{
+	--brand-primary: #660066;
+}
+
+*{
+	margin: 0px; padding: 0px;
+	font-family: "Helvetica Neue","Helvetica","Arial","Verdana","sans-serif";
+}
+
+header, section, footer, aside, nav, article, figure, figcaption, hgroup{
+	/*se declaran como bloques para que sean tratados como div, ya que algunos navegadores aún no lo hacen*/
+	display: block; 
+}
+
+body {
+	background-color: #e9ebee;
+	padding-top: 53px;
+}
+ul, ol {
+			list-style:none;
+		}
+a{
+	color: var(--brand-primary);
+}
+a:focus, a:hover{
+	color: #990099;
+}
+a:link{
+	text-decoration: none;
+
+}
+.btn{
+	border-radius: 0px;
+}
+.btn-primary{
+	background-color: var(--brand-primary);
+	border-color: var(--brand-primary);
+}
+.btn-primary:hover,
+.btn-primary:focus, 
+.btn-primary:active, 
+.btn-primary:active:focus,
+.btn-primary:active:hover{
+	color: #fff;
+	background-color: #990099;
+	border-color: #990099;
+}
+.btn-default:hover {
+    color: white;
+    background-color: #990099;
+    border-color: #990099;
+}
+.btn-default{
+	color: var(--brand-primary);
+	background-color: transparent;
+}
+.form-control{
+	color: var(--brand-primary);
+	border: none;
+	border-radius: 0px;
+	-webkit-box-shadow: none;
+}
+.form-control:focus{
+	border-color: var(--brand-primary);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,0,102,.6);
+}
+.form-group{
+	margin-top: 12px;
+}
+
+.navbar-default .navbar-toggle .icon-bar{
+	background-color: var(--brand-primary);
+}
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover {
+    color: white;
+    background-color: var(--brand-primary);
+}
+.navbar-default .navbar-nav>li>a:focus, 
+.navbar-default .navbar-nav>li>a:hover {
+    color: white;
+    background-color: #990099;
+}
+.navbar-default .navbar-nav>li>a {
+    color: var(--brand-primary);
+    font-weight: bold;
+}
+.has-error.control-label,
+.has-error.form-control{
+	color: #c9302c;
+	border-color: #c9302c;
+}
+.help-block{
+	display: none;
+}
+
+
+.btn-confirm{
+	padding: 6px 30px;
+}
+.btn-tipolight{
+	background-color: #e9ebee;
+	border-color: #e9ebee;
+    color: var(--brand-primary);
+}
+/* ********************************************************************************************
+ * Cabecera
+ * ********************************************************************************************
+*/
+
+.logo{
+	max-width: 44px;
+	max-height: 44px;
+	margin-top: -12px;
+	background-color: #e9ebee;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+.navbaricon{
+	font-size: 22px;
+}
+.navbaricontext{
+	font-size: 10px;
+	padding-left: 3px;
+}
+
+/* ********************************************************************************************
+ * Cuerpo
+ * ********************************************************************************************
+*/
+#cuerpo{
+	max-width: 100%;
+	min-height: 100%;
+	display: table;
+}
+	aside{
+		width: 130px;
+		bottom: 0;
+		left: 0;
+		right: 0
+	}
+
+
+	#seccion { 
+		display: flex;
+		width: auto;
+		left: 118px;
+	} 
+
+.tooltip.fade{
+	white-space: pre-line;
+}
+
+.info:hover{z-index:25;}
+.info span{display: none;}
+.info:hover span{display:block;position:absolute;height: auto;font-size: 9pt;font-weight: normal;top:2em; left:2em; width:35em;padding: 5px;border:1px dashed #e9ebee;
+background-color:#e9ebee; color:#000;text-align: left;}
+/* ********************************************************************************************
+ * Pie
+ * ********************************************************************************************
+*/
+footer {
+	clear: both;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-top: 4px;
+    padding-left: 20px;
+    height: 16px;
+    /* box-shadow: rgba(68,0,68,0.7) 0px 0px 2px 0px; */
+    /* font-weight: bold; */
+    color: #450045;
+    background-color: #f8f8f8;
+    width: 100%;
+}
+
+.inputTextTransparent{
+	background-color: transparent;
+    border: 0px;
+}
+.cabeceraAcordeon{
+	cursor: pointer;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    min-width: 270px;
+}
+
+
+	/* Modal Content */
+	.modal-content {
+		background-color: #e9ebee;
+	    margin: 9% auto; /* 15% from the top and centered */
+	    border: 1px solid #888;
+	    width: 100%; /* Could be more or less, depending on screen size */
+
+	    position: relative;
+	    padding: 0;
+	    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	    -webkit-animation-name: animatetop;
+	    -webkit-animation-duration: 0.4s;
+	    animation-name: animatetop;
+	    animation-duration: 0.4s
+	}
+
+		/* Modal Header */
+		.modal-header {
+		    padding: 2px 16px;
+		    background-color: #f8f8f8;
+		    color: var(--brand-primary);
+		}	
+			/* The Close Button */
+			.close {
+			    color: #333;
+			    float: right;
+			    font-size: 28px;
+			    font-weight: bold;
+			    opacity: 0.3;
+			}
+			.close:hover,
+			.close:focus {
+			    color: black;
+			    text-decoration: none;
+			    cursor: pointer;
+			}
+		/* Modal Body */
+		.modal-body {
+			padding: 2px 16px;
+			background-color: #e9ebee;
+		}
+
+		/* Modal Footer */
+		.modal-footer {
+		    padding: 2px 16px;
+		    background-color: #f8f8f8;
+		    color: var(--brand-primary);
+		    text-align: left;
+		}
+		/* Add Animation */
+		@-webkit-keyframes animatetop {
+		    from {top: -300px; opacity: 0} 
+		    to {top: 0; opacity: 1}
+		}
+
+		@keyframes animatetop {
+		    from {top: -300px; opacity: 0}
+		    to {top: 0; opacity: 1}
+		}

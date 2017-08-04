@@ -1,0 +1,95 @@
+extends ./layout.jade
+block cabecera
+	nav(class="navbar navbar-default navbar-fixed-top")
+		div(class="container-fluid")
+			div(class="navbar-header")
+				button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false")
+					span(class="sr-only") Toggle navigation
+					span(class="icon-bar")
+					span(class="icon-bar")
+					span(class="icon-bar")
+				a(class="navbar-brand" href="/")
+					img(class="logo" alt="Home" src="img/logo.png")
+			div(class="collapse navbar-collapse" id="bs-example-navbar-collapse-1")
+				ul(class="nav navbar-nav")
+					li
+						a(href="/home")
+							|Home
+					li(class="active" title="Preguntas frecuentes" data-toggle="tooltip" data-placement="bottom" )
+						span(class="sr-only") (current)
+						a(href="/faq")
+							|FAQ				
+block cuerpo
+
+	div(class="panel-group" id="accordionFAQ" role="tablist" )
+		div(class="panel panel-default")
+			div(class="panel-heading cabeceraAcordeon info" data-toggle="collapse" data-target="#pregunta1" )
+				h4(class="panel-title" data-toggle="tooltip" data-placement="bottom" title="Clic para abrir o cerrar panel de información.")
+					|¿Cómo funciona la aplicación?
+			div(id="pregunta1" class="panel-body collapse")
+				ul(class="uldecimal")
+					li Se identifica la habitación donde existe una incicendia.
+						ul(class="uldisc")
+							li Mediante código QR
+							li O por código textual de habítación.
+					li Se identifica el activo.
+					li Se añade la información de la incidencia.
+					li Finalmente, se genera.
+				
+		div(class="panel panel-default")
+			div(class="panel-heading cabeceraAcordeon info" data-toggle="collapse" data-parent="#accordion" role="tab" data-target="#pregunta2")
+				h4(class="panel-title" data-toggle="tooltip" data-placement="top" title="Clic para abrir o cerrar panel de información.")
+					|¿Cuál es la visión, misión y valores?
+			div(id="pregunta2" class="panel-body collapse")
+				table(class="table")
+					tr
+						td Visión
+						td Aportar una herramienta que sea referencia en la gestión de incidencias. Disponible para cualquier tipo de organización o persona.
+					tr
+						td Misión
+						td Nuestra misión es crear soluciones efectivas que faciliten la gestión de incidencias y sean utiles a nuestros usuarios y clientes. Además de proporcionar las funcionalidades necesarias para medir, controlar y generar un valor a nuestros clientes que les permita reducir los costes de mantenimiento de sus instalaciones.
+					tr
+						td Valores
+						td 
+							ul
+								li Apoyo y desarrollo de nuestro equipo humano
+								li Compromiso social
+								li Eficacia y eficiencia
+								li Mejora de la experiencia de usuario
+								li Mejora continua de los procesos
+								li Creatividad
+								li Honestidad
+								li Integridad
+
+		div(class="panel panel-default")
+			div(class="panel-heading cabeceraAcordeon info" data-toggle="collapse" data-target="#pregunta3" )
+				h4(class="panel-title" data-toggle="tooltip" data-placement="bottom" title="Clic para abrir o cerrar panel de información.")
+					|¿Qué funcionalidades se están desarrollando?
+			div(id="pregunta3" class="panel-body collapse")
+				p Algunas de las funcionalidades en las que se trabaja (¡Y hay más a la espera!)
+				table(class="table")
+					tr
+						th Funcionalidad
+						th Objetivo
+					tr
+						td Registro.
+						td Permite la guardar un email y contraseña para posterior acceso al sistema.
+					tr
+						td Inicio de sesión.
+						td Se comprueba que el email y contraseña están registrados y se permite el acceso al sistema.
+					tr
+						td Generar una incidencia.
+						td Añade un elemento de tipo incidencia.
+		
+		div(class="panel panel-default")
+			div(class="panel-heading cabeceraAcordeon info" data-toggle="collapse" data-target="#pregunta4" )
+				h4(class="panel-title" data-toggle="tooltip" data-placement="bottom" title="Clic para abrir o cerrar panel de información.")
+					|¿Qué significa Versión Alfa?
+			div(id="pregunta4" class="panel-body collapse")
+				p Que la aplicación está en desarrollo de funcionalidades. 
+					|No es una versión estable por lo que la información puede perderse o 
+					|pueden encontrarse muchos fallos en el funcionamiento.
+					|Una vez estén desarrolladas la mayoría de funcionalidades con las que trabajar,
+					|se pasa a una versión Beta en la que la aplicación está en pruebas para
+					|eliminar fallos y lograr mayor estabilidad de la aplicación.
+					
