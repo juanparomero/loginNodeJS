@@ -12,10 +12,8 @@ Los archivos son:
 2. *sql/ddl.sql código* para crear la tabla
 3. *sql/procedures.sql* código de procesamiento
 
-### Instalar el repositorio
-```
-npm install https://github.com/juanparomero/loginNodeJS
-```
+### Descargar el repositorio
+
 ### Ejecutar
 ```
 node app.js
