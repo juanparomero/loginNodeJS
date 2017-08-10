@@ -1,10 +1,14 @@
+// API REST del servidor
+// funciones necesarias de tratamiento en toolsserv.js
+// conexion a bbdd en connmysql.js
 var express = require("express");
 var bodyParser = require("body-parser");
 var app = express()
 var port = "8080";
 
 
-var connmysql = require("./modulos/connmysql");
+var connmysql = require("/modulos/connmysql");
+var tools = require("/modulos/toolsserv");
 var SHA256 = require("crypto-js/sha256");
 var CSPRNG = require('csprng');
 
@@ -36,7 +40,7 @@ app.post("/register", function(peticion, respuesta){
 	console.log("INFO-register: params",peticion.params)
 	console.log("INFO-register: body",peticion.body)
 
-	var data = dataUserToRegister(peticion.body);
+	var data = tools.dataUserToRegister(peticion.body);
 
 	connmysql.registerUser(data, function(err, resultado){
 		
@@ -57,22 +61,5 @@ app.get("/faq", function(peticion, respuesta){
 	respuesta.status(200,{'content-type': 'text/html'});
 	respuesta.render("faq");
 });
-
-function dataUserToRegister(body){
-	var data = {};
-	var salCSPRNG = CSPRNG(256,36);
-	var passSHA = SHA256(body.password + salCSPRNG).toString();
-
-	data = {
-		name: body.name == undefined ? '' : body.name,
-		surname: body.name == undefined ? '' : body.surname,
-		mobile: body.mobile == undefined ? '' : body.mobile,
-		email : body.email,
-		sal : salCSPRNG,
-		password : passSHA
-	};
-	console.log("INFO-dataUserToRegister",data);
-	return data;
-}
 //=========================================================================================================
 

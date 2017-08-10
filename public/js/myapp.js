@@ -8,7 +8,7 @@ function initanyo(){
 document.addEventListener("DOMContentLoaded",initanyo);
 // ============================================================================================
 
-
+// inicializa tooltip de bootstrap
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
