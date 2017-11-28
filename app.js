@@ -7,8 +7,8 @@ var app = express()
 var port = "8080";
 
 
-var connmysql = require("/modulos/connmysql");
-var tools = require("/modulos/toolsserv");
+var connmysql = require("./modulos/connmysql");
+var tools = require("./modulos/toolsserv");
 var SHA256 = require("crypto-js/sha256");
 var CSPRNG = require('csprng');
 
